@@ -1,6 +1,22 @@
 const addTaskBtn = document.getElementById('addTaskBtn');
 const taskList = document.getElementById('taskList');
 const deadlineList = document.getElementById('deadlineList');
+const dashboardName = document.getElementById('dashboardName');
+
+const DEFAULT_NAME = 'JEE Prep Diary';
+
+const savedName = window.localStorage.getItem('jeeDiaryName');
+const promptedName = window.prompt('What should we call you?', savedName || '');
+
+if (promptedName && promptedName.trim()) {
+  const cleanedName = promptedName.trim();
+  dashboardName.textContent = cleanedName;
+  window.localStorage.setItem('jeeDiaryName', cleanedName);
+} else if (savedName && savedName.trim()) {
+  dashboardName.textContent = savedName.trim();
+} else {
+  dashboardName.textContent = DEFAULT_NAME;
+}
 
 addTaskBtn.addEventListener('click', () => {
   const title = window.prompt('Add a new task');

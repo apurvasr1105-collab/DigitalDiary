@@ -18,11 +18,11 @@
       <header class="top-bar glass-card">
         <div>
           <p class="greeting">Good morning 🌤️</p>
-          <h1 id="dashboardName">JEE Prep Diary</h1>
+          <h1>JEE Prep Diary</h1>
         </div>
-        <label class="toggle-wrap" aria-label="Dark mode toggle">
-          <span>Dark Mode</span>
-          <input type="checkbox" id="darkModeToggle" />
+        <label class="toggle-wrap" aria-label="Focus mode toggle">
+          <span>Focus Mode</span>
+          <input type="checkbox" id="focusToggle" />
           <span class="toggle-slider"></span>
         </label>
       </header>
@@ -32,86 +32,82 @@
           <h2>✅ Daily To-Do List</h2>
         </div>
         <ul id="taskList" class="task-list">
-          <li data-subject="PHYSICS"><input type="checkbox" checked /> <span class="task-text">Revise Electrostatics DPP</span> <span class="subject-pill">PHYSICS</span></li>
-          <li data-subject="CHEMISTRY"><input type="checkbox" /> <span class="task-text">Solve 30 Organic Reactions</span> <span class="subject-pill">CHEMISTRY</span></li>
-          <li data-subject="BOTANY"><input type="checkbox" /> <span class="task-text">Plant Tissue Notes Revision</span> <span class="subject-pill">BOTANY</span></li>
+          <li><input type="checkbox" checked /> Revise Electrostatics DPP</li>
+          <li><input type="checkbox" /> Solve 30 Organic Reactions</li>
+          <li><input type="checkbox" /> Complete 1 Physics Mock Test</li>
         </ul>
-        <div class="add-task-row">
-          <select id="subjectSelect" aria-label="Select subject">
-            <option value="PHYSICS">PHYSICS</option>
-            <option value="CHEMISTRY">CHEMISTRY</option>
-            <option value="ZOOLOGY">ZOOLOGY</option>
-            <option value="BOTANY">BOTANY</option>
-          </select>
-          <button id="addTaskBtn" class="soft-btn" type="button">+ Add Task</button>
-        </div>
+        <button id="addTaskBtn" class="soft-btn">+ Add Task</button>
       </section>
 
       <section class="panel planner glass-card">
         <h2>🕒 Daily Planner</h2>
         <div class="planner-grid">
-          <label><span>Morning</span><textarea placeholder="Concept learning + notes"></textarea></label>
-          <label><span>Afternoon</span><textarea placeholder="Problem solving and PYQs"></textarea></label>
-          <label><span>Evening</span><textarea placeholder="Revision + short test"></textarea></label>
+          <label>
+            <span>Morning</span>
+            <textarea placeholder="Concept learning + notes"></textarea>
+          </label>
+          <label>
+            <span>Afternoon</span>
+            <textarea placeholder="Problem solving and PYQs"></textarea>
+          </label>
+          <label>
+            <span>Evening</span>
+            <textarea placeholder="Revision + short test"></textarea>
+          </label>
         </div>
       </section>
 
       <section class="panel deadlines glass-card">
         <h2>⏰ Upcoming Deadlines</h2>
-        <div id="deadlineList" class="deadline-list">
-          <article><span class="tag urgent">Urgent</span><p class="deadline-text">Mock Test 12 Analysis — Today</p><button class="edit-btn" type="button">Edit</button></article>
-          <article><span class="tag medium">Medium</span><p class="deadline-text">Inorganic Revision Sheet — 2 days</p><button class="edit-btn" type="button">Edit</button></article>
-          <article><span class="tag low">Low</span><p class="deadline-text">Formula Wall Update — 5 days</p><button class="edit-btn" type="button">Edit</button></article>
+        <div class="deadline-list">
+          <article><span class="tag urgent">Urgent</span> Mock Test 12 Analysis — Today</article>
+          <article><span class="tag medium">Medium</span> Inorganic Revision Sheet — 2 days</article>
+          <article><span class="tag low">Low</span> Formula Wall Update — 5 days</article>
         </div>
       </section>
 
       <section class="panel monthly glass-card">
-        <div class="panel-title-line">
-          <h2>📌 Monthly Planner Overview</h2>
-          <button id="addMonthlyTaskBtn" class="edit-btn" type="button">+ Add Monthly Task</button>
-        </div>
+        <h2>📌 Monthly Planner Overview</h2>
         <div class="goal-cards">
-          <article class="monthly-card" data-track="Physics Sprint">
+          <article>
             <h3>Physics Sprint</h3>
-            <ul class="mini-list"><li>Finish NLM PYQs</li></ul>
+            <p>Finish Mechanics backlog chapters</p>
             <div class="bar"><span style="--value: 74%"></span></div>
           </article>
-          <article class="monthly-card" data-track="Chemistry Modules">
+          <article>
             <h3>Chemistry Modules</h3>
-            <ul class="mini-list"><li>Hydrocarbons NCERT line-by-line</li></ul>
+            <p>Daily NCERT + reaction mechanisms</p>
             <div class="bar"><span style="--value: 52%"></span></div>
           </article>
-          <article class="monthly-card" data-track="Biology Consolidation">
-            <h3>Biology Consolidation</h3>
-            <ul class="mini-list"><li>Human Physiology charts</li></ul>
+          <article>
+            <h3>Maths Practice</h3>
+            <p>Target 400 quality questions</p>
             <div class="bar"><span style="--value: 64%"></span></div>
           </article>
         </div>
       </section>
 
       <section class="panel goals glass-card">
-        <div class="panel-title-line">
-          <h2>🎯 Goals</h2>
-          <button id="editGoalsBtn" class="edit-btn" type="button">Edit Goals</button>
-        </div>
-        <div class="goal-row" data-goal="Crack JEE Advanced"><span class="goal-label">Crack JEE Advanced</span><div class="bar"><span style="--value: 68%"></span></div></div>
-        <div class="goal-row" data-goal="Complete Organic Chemistry"><span class="goal-label">Complete Organic Chemistry</span><div class="bar"><span style="--value: 57%"></span></div></div>
-        <div class="goal-row" data-goal="Improve Mock Scores"><span class="goal-label">Improve Mock Scores</span><div class="bar"><span style="--value: 73%"></span></div></div>
+        <h2>🎯 Goals</h2>
+        <div class="goal-row"><span>Crack JEE Advanced</span><div class="bar"><span style="--value: 68%"></span></div></div>
+        <div class="goal-row"><span>Complete Organic Chemistry</span><div class="bar"><span style="--value: 57%"></span></div></div>
+        <div class="goal-row"><span>Improve Mock Scores</span><div class="bar"><span style="--value: 73%"></span></div></div>
       </section>
 
       <section class="panel progress glass-card">
-        <h2>📈 Study Progress (from completed tasks)</h2>
+        <h2>📈 Study Progress</h2>
         <div class="circles">
-          <div class="circle" data-subject="PHYSICS" style="--pct: 0"><span>0%</span><small>Physics</small></div>
-          <div class="circle" data-subject="CHEMISTRY" style="--pct: 0"><span>0%</span><small>Chemistry</small></div>
-          <div class="circle" data-subject="ZOOLOGY" style="--pct: 0"><span>0%</span><small>Zoology</small></div>
-          <div class="circle" data-subject="BOTANY" style="--pct: 0"><span>0%</span><small>Botany</small></div>
+          <div class="circle" style="--pct: 72"><span>72%</span><small>Physics</small></div>
+          <div class="circle" style="--pct: 61"><span>61%</span><small>Chemistry</small></div>
+          <div class="circle" style="--pct: 67"><span>67%</span><small>Maths</small></div>
         </div>
       </section>
 
       <section class="panel quote glass-card">
         <h2>🚀 Motivation</h2>
-        <blockquote>“Success is the sum of small efforts, repeated day in and day out.”</blockquote>
+        <blockquote>
+          “Success is the sum of small efforts, repeated day in and day out.”
+        </blockquote>
       </section>
     </main>
 
